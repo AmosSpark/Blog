@@ -4,6 +4,9 @@ const express = require("express"),
 const postController = require("../controllers/posts_control");
 
 // GET POSTS
-postRouter.use("/", postController.getPost);
+postRouter.get("/", postController.getPost);
+
+// GET CATEGORIES
+postRouter.get("/categories", postController.getCategories);
 
 module.exports = postRouter;

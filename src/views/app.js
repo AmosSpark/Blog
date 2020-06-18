@@ -3,7 +3,6 @@ const express = require("express"),
 
 const postsView = require("./posts_router"),
   commentsView = require("./comments_router"),
-  categoriesView = require("./categories_router"),
   draftsView = require("./drafts_router");
 
 const wrongRequestControl = require("../controllers/404_control");
@@ -19,10 +18,6 @@ app.use(posts_route, postsView);
 // COMMENTS ROUTER
 const comments_route = "/comments";
 app.use(comments_route, commentsView);
-
-// CATEGORIES ROUTER
-const categories_route = "/categories";
-app.use(categories_route, categoriesView);
 
 // DRAFTS ROUTER
 const drafts_route = "/drafts";

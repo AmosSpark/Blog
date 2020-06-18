@@ -4,6 +4,6 @@ const express = require("express"),
 const commentContoller = require("../controllers/comments_controller");
 
 // GET COMMENTS
-commentsRouter.use("/", commentContoller.getComments);
+commentsRouter.get("/", commentContoller.getComments);
 
 module.exports = commentsRouter;

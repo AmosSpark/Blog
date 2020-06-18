@@ -4,6 +4,6 @@ const express = require("express"),
 const draftsController = require("../controllers/drafts_control");
 
 // GET DRAFTS
-draftsRouter.use("/", draftsController.getDrafts);
+draftsRouter.get("/", draftsController.getDrafts);
 
 module.exports = draftsRouter;
